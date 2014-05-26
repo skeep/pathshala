@@ -1,0 +1,89 @@
+<form role="form" name="studentForm" novalidate class="css-form">
+    <div class="form-group">
+        <label for="dob">Date of Admission</label>
+        <input type="date" class="form-control" id="doa" placeholder="Date of Admission" ng-model="student.model.doa"
+               required>
+    </div>
+    <div class="form-group">
+        <label for="name">Student's Name</label>
+        <input type="text" class="form-control" id="name" placeholder="First" ng-model="student.model.firstName"
+               required>
+        <input type="text" class="form-control" placeholder="Middle" ng-model="student.model.middleName">
+        <input type="text" class="form-control" placeholder="Last" ng-model="student.model.lastName">
+    </div>
+    <div class="form-group">
+        <label for="mothersName">Mother's Name</label>
+        <input type="text" class="form-control" id="mothersName" placeholder="Mother's Name"
+               ng-model="student.model.mothersName" required>
+    </div>
+    <div class="form-group">
+        <label for="mothersOccupation">Father's Occupation</label>
+        <input type="text" class="form-control" id="mothersOccupation" placeholder="Mother's Occupation"
+               ng-model="student.model.mothersOccupation">
+    </div>
+    <div class="form-group">
+        <label for="fathersName">Father's Name</label>
+        <input type="text" class="form-control" id="fathersName" placeholder="Father's Name"
+               ng-model="student.model.fathersName">
+    </div>
+    <div class="form-group">
+        <label for="fathersOccupation">Father's Occupation</label>
+        <input type="text" class="form-control" id="fathersOccupation" placeholder="Father's Occupation"
+               ng-model="student.model.fathersOccupation">
+    </div>
+    <div class="form-group">
+        <label for="income">Family Annual Income</label>
+        <input type="number" class="form-control" id="income" placeholder="Family Annual Income"
+               ng-model="student.model.income">
+    </div>
+    <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control" id="dob" placeholder="Date of Birth" ng-model="student.model.dob"
+               required>
+    </div>
+    <div class="form-group">
+        <label class="checkbox-inline"><input type="radio" id="male" ng-model="student.model.gender"
+                                              value="male">Male</label>
+        <label class="checkbox-inline"><input type="radio" id="female" ng-model="student.model.gender" value="female">Female</label>
+    </div>
+    <div class="form-group">
+        <label for="presentAddress">Present Address</label>
+        <textarea class="form-control" id="presentAddress" placeholder="Address" ng-model="student.model.presentAddress" required/>
+    </div>
+    <div class="form-group">
+        <label for="permanentAddress">Permanent Address</label>
+        <textarea class="form-control" id="permanentAddress" placeholder="Address" ng-model="student.model.permanentAddress" required/>
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact Numbers</label>
+        <input type="number" class="form-control" id="contact" placeholder="Primary phone number"
+               ng-model="student.model.primaryPhone" required>
+        <input type="number" class="form-control" placeholder="Secondary phone number"
+               ng-model="student.model.secondaryPhone">
+    </div>
+    <div class="form-group">
+        <label class="checkbox-inline"><input type="radio" id="gn" ng-model="student.model.caste"
+                                              value="GN">General</label>
+        <label class="checkbox-inline"><input type="radio" id="sc" ng-model="student.model.caste" value="SC">Scheduled
+            Caste</label>
+        <label class="checkbox-inline"><input type="radio" id="st" ng-model="student.model.caste" value="ST">Scheduled
+            Tribe</label>
+        <label class="checkbox-inline"><input type="radio" id="obc" ng-model="student.model.caste" value="OBC">Other
+            Back-word Caste</label>
+    </div>
+    <div class="form-group">
+        <label for="remarks">Remarks</label>
+        <textarea class="form-control" id="remarks" placeholder="Remarks" ng-model="student.model.remarks"/>
+    </div>
+    <div class="form-group">
+        <label for="religion">Religion</label>
+        <select name="religion" id="religion" ng-model="student.model.religion"
+                ng-options="religion.name for religion in student.formOptions.religions" ng-required>
+            <option value="">--- select religion ---</option>
+        </select>
+    </div>
+
+</form>
+
+<!--<button class="btn btn-primary" ng-click="student.save()" ng-disabled="studentForm.$invalid">Save</button>-->
+<button class="btn btn-primary" ng-click="student.save()">Save</button>

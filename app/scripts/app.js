@@ -9,6 +9,10 @@ angular.module('pathshalaApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/students', {
+        templateUrl: 'views/students.html',
+        controller: 'StudentsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
